@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 28 18:16:16 2025
+# Process ID: 26200
+# Current directory: /home/ubuntu/cod lab7/lab7/lab7.runs/impl_1
+# Command line: vivado -log cache_tb.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source cache_tb.tcl -notrace
+# Log file: /home/ubuntu/cod lab7/lab7/lab7.runs/impl_1/cache_tb.vdi
+# Journal file: /home/ubuntu/cod lab7/lab7/lab7.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source cache_tb.tcl -notrace

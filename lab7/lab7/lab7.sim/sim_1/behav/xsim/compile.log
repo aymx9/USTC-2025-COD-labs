@@ -1,0 +1,10 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/cod lab7/src/bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/cod lab7/src/mem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/cod lab7/src/mem_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mem_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/cod lab7/src/simple_cache.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/ubuntu/cod lab7/src/cache_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cache_tb

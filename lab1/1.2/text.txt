@@ -1,0 +1,21 @@
+    addi.w r2, r2, 80 #这里面是N
+    addi.w r6, r6, 1 #r6存加数1的低位
+    addi.w r8, r8, 1 #r8存加数2的低位
+    addi.w r1, r1, 2 #r1是计数器
+
+label_1:
+    add.w r3, r5, r7 #r3是和的高位，r5存加数1的高位，r7存加数2的高位，高位相加
+    add.w r4, r6, r8 #r4是和的低位，低位相加
+
+    bltu r6, r4, label_2 #判断进位，低位加数小于低位和则跳转，不进行进位
+    addi.w r3, r3, 1
+
+label_2:
+    addi.w r7, r5, 0 
+    addi.w r8, r6, 0 #加数1赋值给加数2
+    addi.w r5, r3, 0
+    addi.w r6, r4, 0 #和赋值给加数1
+    addi.w r1, r1, 1 
+
+    bne r1, r2, label_1
+

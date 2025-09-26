@@ -1,0 +1,10 @@
+0.6
+2019.1
+May 24 2019
+14:51:52
+/home/ubuntu/cod lab7/lab7/lab7.sim/sim_1/behav/xsim/glbl.v,1558713910,verilog,,,,glbl,,,,,,,,
+/home/ubuntu/cod lab7/src/bram.v,1748405023,verilog,,/home/ubuntu/cod lab7/src/mem.v,,bram,,,,,,,,
+/home/ubuntu/cod lab7/src/cache_tb.v,1748418594,verilog,,,,cache_tb,,,,,,,,
+/home/ubuntu/cod lab7/src/mem.v,1748405023,verilog,,/home/ubuntu/cod lab7/src/mem_bram.v,,mem,,,,,,,,
+/home/ubuntu/cod lab7/src/mem_bram.v,1748418594,verilog,,/home/ubuntu/cod lab7/src/simple_cache.v,,mem_bram,,,,,,,,
+/home/ubuntu/cod lab7/src/simple_cache.v,1748427288,verilog,,/home/ubuntu/cod lab7/src/cache_tb.v,,cache,,,,,,,,

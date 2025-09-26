@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7a35tfgg484-1" LaunchTime="1748427328">
+  <File Type="PA-TCL" Name="cache_tb.tcl"/>
+  <File Type="REPORTS-TCL" Name="cache_tb_reports.tcl"/>
+  <File Type="OPT-DCP" Name="cache_tb_opt.dcp"/>
+  <File Type="OPT-DRC" Name="cache_tb_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="cache_tb.hwdef"/>
+  <File Type="PWROPT-DCP" Name="cache_tb_pwropt.dcp"/>
+  <File Type="PLACE-DCP" Name="cache_tb_placed.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="cache_tb_incremental_reuse_pre_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="cache_tb_postplace_pwropt.dcp"/>
+  <File Type="PHYSOPT-DCP" Name="cache_tb_physopt.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="cache_tb_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="cache_tb_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="cache_tb_routed_bb.dcp"/>
+  <File Type="BG-BIT" Name="cache_tb.bit"/>
+  <File Type="BG-BIN" Name="cache_tb.bin"/>
+  <File Type="BITSTR-MSK" Name="cache_tb.msk"/>
+  <File Type="ROUTE-TIMING-PB" Name="cache_tb_timing_summary_routed.pb"/>
+  <File Type="BITSTR-RBT" Name="cache_tb.rbt"/>
+  <File Type="BITSTR-NKY" Name="cache_tb.nky"/>
+  <File Type="BITSTR-BMM" Name="cache_tb_bd.bmm"/>
+  <File Type="BG-DRC" Name="cache_tb.drc"/>
+  <File Type="BITSTR-MMI" Name="cache_tb.mmi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-BGN" Name="cache_tb.bgn"/>
+  <File Type="BITSTR-SYSDEF" Name="cache_tb.sysdef"/>
+  <File Type="BITSTR-LTX" Name="cache_tb.ltx"/>
+  <File Type="RDI-RDI" Name="cache_tb.vdi"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="cache_tb_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="cache_tb_postroute_physopt.dcp"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../src/bram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/mem.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/mem_bram.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/simple_cache.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../src/cache_tb.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="cache_tb"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

@@ -1,0 +1,10 @@
+    addi.w r1, r1, 1
+    addi.w r4, r4, 1 #这两个是两个加数
+    addi.w r5, r5, 2 #这个是计数器
+    addi.w r2, r2, 30 #这个里面存N
+label:
+    add.w r3, r1, r4 #这里面是结果
+    addi.w r5, r5, 1
+    addi.w r1, r4, 0
+    addi.w r4, r3, 0
+    bne r5, r2, label #若不等，则跳转

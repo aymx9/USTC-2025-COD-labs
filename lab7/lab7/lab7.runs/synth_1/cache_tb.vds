@@ -1,0 +1,535 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:47:09 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed May 28 18:15:31 2025
+# Process ID: 26060
+# Current directory: /home/ubuntu/cod lab7/lab7/lab7.runs/synth_1
+# Command line: vivado -log cache_tb.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cache_tb.tcl
+# Log file: /home/ubuntu/cod lab7/lab7/lab7.runs/synth_1/cache_tb.vds
+# Journal file: /home/ubuntu/cod lab7/lab7/lab7.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source cache_tb.tcl -notrace
+Command: synth_design -top cache_tb -part xc7a35tfgg484-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 26075 
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1479.223 ; gain = 100.742 ; free physical = 4243 ; free virtual = 4762
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cache_tb' [/home/ubuntu/cod lab7/src/cache_tb.v:8]
+	Parameter READ_NUM bound to: 2000 - type: integer 
+	Parameter WRITE_NUM bound to: 1000 - type: integer 
+	Parameter INDEX_WIDTH bound to: 3 - type: integer 
+	Parameter LINE_OFFSET_WIDTH bound to: 2 - type: integer 
+	Parameter SPACE_OFFSET bound to: 2 - type: integer 
+	Parameter MEM_ADDR_WIDTH bound to: 10 - type: integer 
+	Parameter WAY_NUM bound to: 2 - type: integer 
+WARNING: [Synth 8-85] always block has no event control specified [/home/ubuntu/cod lab7/src/cache_tb.v:30]
+INFO: [Synth 8-251] Read error at x, expect xxxxxxxx, get xxxxxxxx [/home/ubuntu/cod lab7/src/cache_tb.v:68]
+INFO: [Synth 8-6157] synthesizing module 'cache' [/home/ubuntu/cod lab7/src/simple_cache.v:7]
+	Parameter INDEX_WIDTH bound to: 3 - type: integer 
+	Parameter LINE_OFFSET_WIDTH bound to: 2 - type: integer 
+	Parameter SPACE_OFFSET bound to: 2 - type: integer 
+	Parameter REPLACE_STRATEGY bound to: 0 - type: integer 
+	Parameter WAY_NUM bound to: 2 - type: integer 
+	Parameter LINE_WIDTH bound to: 128 - type: integer 
+	Parameter TAG_WIDTH bound to: 25 - type: integer 
+	Parameter SET_NUM bound to: 8 - type: integer 
+	Parameter REPLACE_COUNTER_WIDTH bound to: 1 - type: integer 
+	Parameter IDLE bound to: 3'b000 
+	Parameter READ bound to: 3'b001 
+	Parameter MISS bound to: 3'b010 
+	Parameter WRITE bound to: 3'b011 
+	Parameter W_DIRTY bound to: 3'b100 
+INFO: [Synth 8-6157] synthesizing module 'bram' [/home/ubuntu/cod lab7/src/bram.v:2]
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 27 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bram' (1#1) [/home/ubuntu/cod lab7/src/bram.v:2]
+INFO: [Synth 8-6157] synthesizing module 'bram__parameterized0' [/home/ubuntu/cod lab7/src/bram.v:2]
+	Parameter ADDR_WIDTH bound to: 3 - type: integer 
+	Parameter DATA_WIDTH bound to: 128 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'bram__parameterized0' (1#1) [/home/ubuntu/cod lab7/src/bram.v:2]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/cod lab7/src/simple_cache.v:314]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/cod lab7/src/simple_cache.v:323]
+INFO: [Synth 8-226] default block is never used [/home/ubuntu/cod lab7/src/simple_cache.v:332]
+WARNING: [Synth 8-6014] Unused sequential element rand_seed_reg was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:113]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[0] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[1] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[2] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[3] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[4] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[5] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[6] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+WARNING: [Synth 8-6014] Unused sequential element fifo_counter_reg[7] was removed.  [/home/ubuntu/cod lab7/src/simple_cache.v:115]
+INFO: [Synth 8-6155] done synthesizing module 'cache' (2#1) [/home/ubuntu/cod lab7/src/simple_cache.v:7]
+INFO: [Synth 8-6157] synthesizing module 'mem' [/home/ubuntu/cod lab7/src/mem.v:1]
+	Parameter INDEX_WIDTH bound to: 3 - type: integer 
+	Parameter LINE_OFFSET_WIDTH bound to: 2 - type: integer 
+	Parameter SPACE_OFFSET bound to: 2 - type: integer 
+	Parameter MEM_ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter WAY_NUM bound to: 2 - type: integer 
+	Parameter LINE_WIDTH bound to: 128 - type: integer 
+	Parameter cnt_max bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mem_bram' [/home/ubuntu/cod lab7/src/mem_bram.v:3]
+	Parameter ADDR_WIDTH bound to: 8 - type: integer 
+	Parameter DATA_WIDTH bound to: 128 - type: integer 
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:18]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:19]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:20]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:21]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:22]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:23]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:24]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:25]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:26]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:27]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:28]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:29]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:30]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:31]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:32]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:33]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:34]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:35]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:36]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:37]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:38]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:39]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:40]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:41]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:42]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:43]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:44]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:45]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:46]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:47]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:48]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:49]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:50]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:51]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:52]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:53]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:54]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:55]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:56]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:57]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:58]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:59]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:60]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:61]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:62]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:63]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:64]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:65]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:66]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:67]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:68]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:69]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:70]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:71]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:72]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:73]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:74]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:75]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:76]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:77]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:78]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:79]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:80]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:81]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:82]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:83]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:84]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:85]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:86]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:87]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:88]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:89]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:90]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:91]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:92]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:93]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:94]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:95]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:96]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:97]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:98]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:99]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:100]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:101]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:102]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:103]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:104]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:105]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:106]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:107]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:108]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:109]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:110]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:111]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:112]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:113]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:114]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:115]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:116]
+WARNING: [Synth 8-311] ignoring non-constant assignment in initial block [/home/ubuntu/cod lab7/src/mem_bram.v:117]
+INFO: [Common 17-14] Message 'Synth 8-311' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-6155] done synthesizing module 'mem_bram' (3#1) [/home/ubuntu/cod lab7/src/mem_bram.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mem' (4#1) [/home/ubuntu/cod lab7/src/mem.v:1]
+WARNING: [Synth 8-6014] Unused sequential element diff_reg was removed.  [/home/ubuntu/cod lab7/src/cache_tb.v:69]
+INFO: [Synth 8-6155] done synthesizing module 'cache_tb' (5#1) [/home/ubuntu/cod lab7/src/cache_tb.v:8]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[31]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[30]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[29]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[28]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[27]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[26]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[25]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[24]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[23]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[22]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[21]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[20]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[19]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[18]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[17]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[16]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[15]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[14]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[13]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[12]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[3]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[2]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[1]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[0]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1535.941 ; gain = 157.461 ; free physical = 4265 ; free virtual = 4785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1541.879 ; gain = 163.398 ; free physical = 4265 ; free virtual = 4785
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35tfgg484-1
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tfgg484-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1549.883 ; gain = 171.402 ; free physical = 4265 ; free virtual = 4784
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6430] The Block RAM "bram__parameterized0:/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+INFO: [Synth 8-6430] The Block RAM "mem_bram:/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1585.781 ; gain = 207.301 ; free physical = 4194 ; free virtual = 4714
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 3     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 5     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 3     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+	             1024 Bit         RAMs := 2     
+	              216 Bit         RAMs := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 12    
+	   6 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 8     
+	   4 Input     32 Bit        Muxes := 3     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 30    
+	   5 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 14    
+	   6 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module cache_tb 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module bram 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---RAMs : 
+	              216 Bit         RAMs := 1     
+Module bram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                3 Bit    Registers := 1     
++---RAMs : 
+	             1024 Bit         RAMs := 1     
+Module cache 
+Detailed RTL Component Info : 
++---Registers : 
+	              128 Bit    Registers := 2     
+	               32 Bit    Registers := 3     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 10    
+	   6 Input    128 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 8     
+	   4 Input     32 Bit        Muxes := 3     
+	   6 Input     32 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 3     
+	   2 Input      2 Bit        Muxes := 30    
+	   5 Input      2 Bit        Muxes := 1     
+	   6 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 11    
+	   6 Input      1 Bit        Muxes := 6     
+Module mem_bram 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              32K Bit         RAMs := 1     
+Module mem 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    128 Bit        Muxes := 2     
+	   2 Input      6 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'tag_bram_1/addr_r_reg[2:0]' into 'tag_bram_0/addr_r_reg[2:0]' [/home/ubuntu/cod lab7/src/bram.v:22]
+WARNING: [Synth 8-6040] Register test_cnt_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register test_cnt_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[31]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[30]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[29]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[28]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[27]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[26]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[25]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[24]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[23]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[22]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[21]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[20]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[19]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[18]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[17]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[16]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[15]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[14]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[13]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[12]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[3]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[2]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[1]
+WARNING: [Synth 8-3331] design mem has unconnected port mem_addr[0]
+RAM Pipeline Warning: Read Address Register Found For RAM data_bram_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_bram_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "cache_inst/data_bram_0/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM data_bram_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_bram_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+INFO: [Synth 8-6430] The Block RAM "cache_inst/data_bram_1/ram_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_inst/mem_bram/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_inst/mem_bram/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_bram_0/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM data_bram_1/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM mem_inst/mem_bram/ram_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+ROM:
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|cache_tb    | p_0_out    | 4096x33       | LUT            | 
+|cache_tb    | p_0_out    | 4096x10       | LUT            | 
+|cache_tb    | p_0_out    | 4096x10       | LUT            | 
++------------+------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:33 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1085 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.133 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 2198.141 ; gain = 819.652 ; free physical = 4033 ; free virtual = 4557
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2198.141 ; gain = 0.000 ; free physical = 3970 ; free virtual = 4495
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 161 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:35 . Memory (MB): peak = 2198.141 ; gain = 819.660 ; free physical = 4071 ; free virtual = 4596
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2198.141 ; gain = 0.000 ; free physical = 4071 ; free virtual = 4596
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/ubuntu/cod lab7/lab7/lab7.runs/synth_1/cache_tb.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cache_tb_utilization_synth.rpt -pb cache_tb_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed May 28 18:16:14 2025...
