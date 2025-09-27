@@ -1,1 +1,1 @@
-使用LOONG，与RISKCV有微小区别
+使用LOONG，与RISCV有微小区别
